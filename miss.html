@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I Miss You - Romantic Message</title>
+  <style>
+    /* Body styling */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f3f4f8;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* Main message container styling */
+    .message-container {
+      text-align: center;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      position: relative;
+      animation: fadeIn 2s ease;
+    }
+
+    /* Heading styling */
+    h1 {
+      font-size: 32px;
+      color: #e74c3c;
+      margin-bottom: 20px;
+    }
+
+    /* Paragraph styling */
+    p {
+      font-size: 20px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    /* Heart animation */
+    .heart {
+      font-size: 50px;
+      color: red;
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: heartPulse 1.5s infinite;
+    }
+
+    /* Button styling */
+    .button {
+      padding: 12px 20px;
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #c0392b;
+    }
+
+    /* Animation for the heart pulsing */
+    @keyframes heartPulse {
+      0%, 100% {
+        transform: translateX(-50%) scale(1);
+      }
+      50% {
+        transform: translateX(-50%) scale(1.2);
+      }
+    }
+
+    /* Fade-in animation for the message */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="message-container">
+    <div class="heart">💖</div>
+    <h1>I Miss You</h1>
+    <p>Every moment without you feels incomplete. I can't wait to hold you again.</p>
+    <button class="button" onclick="sendMessage()">I Miss You So Much</button>
+  </div>
+
+  <script>
+    function sendMessage() {
+      document.querySelector(".message-container").innerHTML = `
+        <div class="heart">💖</div>
+        <h1>I Miss You So Much!</h1>
+        <p>Every second without you feels like an eternity. You're always on my mind, and I can't wait to see you again.</p>
+      `;
+      document.querySelector(".button").style.display = 'none';  // Hide the button after click
+    }
+  </script>
+
+</body>
+</html>
